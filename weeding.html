@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>أحمد & سارة | دعوة زفاف</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --black:#050505;
+    --black2:#0b090a;
+    --burgundy:#591329;
+    --burgundy2:#7c1c3b;
+    --cream:#eee5e2;
+    --muted:#a99da0;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--black);
+    color:var(--cream);
+    font-family:"Cairo",sans-serif;
+    overflow-x:hidden;
+}
+
+/* ================================
+   OPENING
+================================ */
+
+.opening{
+    position:fixed;
+    inset:0;
+    z-index:9999;
+    background:
+        radial-gradient(circle at 50% 35%, rgba(124,28,59,.35), transparent 35%),
+        linear-gradient(135deg,#030303,#12070b 55%,#030303);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    transition:1.2s cubic-bezier(.77,0,.18,1);
+}
+
+.opening.hide{
+    opacity:0;
+    visibility:hidden;
+    transform:scale(1.08);
+}
+
+.opening::before{
+    content:"";
+    position:absolute;
+    inset:20px;
+    border:1px solid rgba(238,229,226,.15);
+    pointer-events:none;
+}
+
+.opening-content{
+    position:relative;
+    z-index:2;
+    width:min(90%,700px);
+}
+
+.small-title{
+    font-size:11px;
+    letter-spacing:5px;
+    color:#bbaeb2;
+    margin-bottom:35px;
+}
+
+.names{
+    font-family:"Amiri",serif;
+    font-size:clamp(70px,13vw,150px);
+    line-height:.85;
+    font-weight:400;
+}
+
+.names span{
+    display:block;
+}
+
+.names .and{
+    font-size:.35em;
+    color:#9c536c;
+    margin:20px 0;
+}
+
+.opening-date{
+    margin-top:35px;
+    font-size:13px;
+    letter-spacing:4px;
+    color:#c7babe;
+}
+
+.open-button{
+    margin-top:55px;
+    border:1px solid rgba(238,229,226,.4);
+    background:transparent;
+    color:white;
+    padding:16px 38px;
+    font-family:"Cairo";
+    cursor:pointer;
+    font-size:12px;
+    letter-spacing:2px;
+    transition:.4s;
+}
+
+.open-button:hover{
+    background:var(--burgundy);
+    border-color:var(--burgundy);
+    transform:translateY(-3px);
+}
+
+/* decorative circle */
+
+.circle{
+    position:absolute;
+    width:420px;
+    height:420px;
+    border:1px solid rgba(124,28,59,.25);
+    border-radius:50%;
+    animation:rotate 25s linear infinite;
+}
+
+.circle::before{
+    content:"";
+    position:absolute;
+    inset:35px;
+    border:1px solid rgba(238,229,226,.08);
+    border-radius:50%;
+}
+
+@keyframes rotate{
+    from{transform:rotate(0)}
+    to{transform:rotate(360deg)}
+}
+
+/* ================================
+   MAIN
+================================ */
+
+main{
+    background:
+        radial-gradient(circle at 20% 20%,rgba(89,19,41,.16),transparent 30%),
+        var(--black);
+}
+
+/* ================================
+   HERO
+================================ */
+
+.hero{
+    min-height:100vh;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    padding:80px 20px;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    width:600px;
+    height:600px;
+    background:var(--burgundy);
+    filter:blur(180px);
+    opacity:.13;
+    border-radius:50%;
+    left:-250px;
+    top:20%;
+}
+
+.hero-layout{
+    width:min(1150px,100%);
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.hero-text{
+    position:relative;
+    z-index:2;
+}
+
+.eyebrow{
+    color:#a96a7d;
+    font-size:11px;
+    letter-spacing:4px;
+    margin-bottom:25px;
+}
+
+.hero-title{
+    font-family:"Amiri",serif;
+    font-size:clamp(70px,9vw,125px);
+    line-height:.78;
+    font-weight:400;
+}
+
+.hero-title div:last-child{
+    color:#8d2948;
+    margin-right:70px;
+}
+
+.hero-description{
+    color:var(--muted);
+    max-width:400px;
+    line-height:2;
+    font-size:14px;
+    margin-top:35px;
+}
+
+.hero-date{
+    margin-top:40px;
+    display:flex;
+    align-items:center;
+    gap:20px;
+    font-size:13px;
+}
+
+.hero-date::before{
+    content:"";
+    width:55px;
+    height:1px;
+    background:var(--burgundy2);
+}
+
+/* PHOTO */
+
+.hero-photo{
+    position:relative;
+    height:650px;
+}
+
+.photo-main{
+    position:absolute;
+    width:75%;
+    height:85%;
+    right:0;
+    top:5%;
+    object-fit:cover;
+    filter:saturate(.8);
+}
+
+.photo-main::after{
+    content:"";
+}
+
+.photo-frame{
+    position:absolute;
+    width:70%;
+    height:78%;
+    left:0;
+    bottom:0;
+    border:1px solid rgba(238,229,226,.25);
+    z-index:3;
+    pointer-events:none;
+}
+
+.photo-second{
+    position:absolute;
+    width:45%;
+    height:42%;
+    object-fit:cover;
+    left:5%;
+    bottom:7%;
+    z-index:4;
+    border:8px solid var(--black);
+}
+
+/* ================================
+   QUOTE
+================================ */
+
+.quote{
+    padding:150px 20px;
+    text-align:center;
+    position:relative;
+}
+
+.quote-line{
+    width:1px;
+    height:70px;
+    background:var(--burgundy2);
+    margin:0 auto 50px;
+}
+
+.quote p{
+    font-family:"Amiri",serif;
+    font-size:clamp(28px,4vw,52px);
+    line-height:1.8;
+    max-width:900px;
+    margin:auto;
+}
+
+.quote small{
+    display:block;
+    margin-top:30px;
+    color:#907f84;
+    font-size:11px;
+    letter-spacing:3px;
+}
+
+/* ================================
+   COUNTDOWN
+================================ */
+
+.countdown-section{
+    padding:100px 20px;
+    background:
+        linear-gradient(rgba(20,5,10,.85),rgba(20,5,10,.95)),
+        url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1800&q=80")
+        center/cover;
+    text-align:center;
+}
+
+.section-label{
+    color:#b56b82;
+    font-size:11px;
+    letter-spacing:4px;
+    margin-bottom:25px;
+}
+
+.countdown{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:45px;
+    margin-top:50px;
+    flex-wrap:wrap;
+}
+
+.time{
+    min-width:100px;
+}
+
+.time strong{
+    display:block;
+    font-family:"Amiri";
+    font-size:65px;
+    font-weight:400;
+}
+
+.time span{
+    color:#a99da0;
+    font-size:10px;
+    letter-spacing:3px;
+}
+
+/* ================================
+   EVENT
+================================ */
+
+.event{
+    padding:150px 20px;
+}
+
+.event-container{
+    width:min(1050px,100%);
+    margin:auto;
+}
+
+.event-heading{
+    font-family:"Amiri";
+    font-size:clamp(45px,7vw,80px);
+    font-weight:400;
+    margin-bottom:80px;
+}
+
+.event-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    border-top:1px solid rgba(238,229,226,.15);
+}
+
+.event-item{
+    padding:45px 30px;
+    border-bottom:1px solid rgba(238,229,226,.15);
+}
+
+.event-item:nth-child(odd){
+    border-left:1px solid rgba(238,229,226,.15);
+}
+
+.event-item h3{
+    color:#9f526a;
+    font-size:11px;
+    letter-spacing:3px;
+    margin-bottom:20px;
+}
+
+.event-item p{
+    font-family:"Amiri";
+    font-size:28px;
+}
+
+.event-item small{
+    display:block;
+    color:#918589;
+    margin-top:10px;
+}
+
+/* ================================
+   MAP
+================================ */
+
+.map-section{
+    padding:0 20px 150px;
+}
+
+.map-wrapper{
+    width:min(1050px,100%);
+    margin:auto;
+    position:relative;
+}
+
+.map-wrapper iframe{
+    width:100%;
+    height:500px;
+    border:0;
+    filter:grayscale(1) contrast(1.1);
+}
+
+.map-overlay{
+    position:absolute;
+    bottom:25px;
+    right:25px;
+    background:rgba(5,5,5,.92);
+    padding:25px 30px;
+    border-right:3px solid var(--burgundy2);
+}
+
+.map-overlay h3{
+    font-family:"Amiri";
+    font-size:25px;
+}
+
+.map-overlay p{
+    color:#95888d;
+    font-size:12px;
+    margin-top:5px;
+}
+
+/* ================================
+   RSVP
+================================ */
+
+.rsvp{
+    min-height:500px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:80px 20px;
+    background:
+        radial-gradient(circle at center,rgba(124,28,59,.35),transparent 55%);
+}
+
+.rsvp h2{
+    font-family:"Amiri";
+    font-size:clamp(50px,7vw,90px);
+    font-weight:400;
+}
+
+.rsvp p{
+    color:#a99da0;
+    margin:20px auto 40px;
+}
+
+.rsvp-button{
+    display:inline-block;
+    text-decoration:none;
+    color:white;
+    border:1px solid rgba(238,229,226,.4);
+    padding:15px 40px;
+    transition:.4s;
+    font-size:12px;
+}
+
+.rsvp-button:hover{
+    background:var(--burgundy);
+    border-color:var(--burgundy);
+}
+
+/* ================================
+   FOOTER
+================================ */
+
+footer{
+    border-top:1px solid rgba(238,229,226,.1);
+    text-align:center;
+    padding:45px 20px;
+    color:#766a6f;
+    font-size:10px;
+    letter-spacing:2px;
+}
+
+footer strong{
+    color:#a45c73;
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media(max-width:800px){
+
+    .opening::before{
+        inset:12px;
+    }
+
+    .circle{
+        width:300px;
+        height:300px;
+    }
+
+    .hero{
+        min-height:auto;
+        padding:120px 20px 80px;
+    }
+
+    .hero-layout{
+        grid-template-columns:1fr;
+        gap:70px;
+    }
+
+    .hero-title{
+        font-size:85px;
+    }
+
+    .hero-title div:last-child{
+        margin-right:30px;
+    }
+
+    .hero-photo{
+        height:520px;
+    }
+
+    .photo-main{
+        width:80%;
+        height:85%;
+    }
+
+    .photo-second{
+        width:50%;
+        height:40%;
+    }
+
+    .quote{
+        padding:110px 25px;
+    }
+
+    .countdown{
+        gap:25px;
+    }
+
+    .time{
+        min-width:75px;
+    }
+
+    .time strong{
+        font-size:50px;
+    }
+
+    .event{
+        padding:100px 20px;
+    }
+
+    .event-grid{
+        grid-template-columns:1fr;
+    }
+
+    .event-item:nth-child(odd){
+        border-left:0;
+    }
+
+    .map-wrapper iframe{
+        height:400px;
+    }
+
+    .map-overlay{
+        position:relative;
+        bottom:auto;
+        right:auto;
+        margin-top:-1px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================================
+     OPENING SCREEN
+================================ -->
+
+<section class="opening" id="opening">
+
+    <div class="circle"></div>
+
+    <div class="opening-content">
+
+        <div class="small-title">
+            WEDDING INVITATION
+        </div>
+
+        <div class="names">
+            <p>أحمد & سارة </p>
+        </div>
+
+        <div class="opening-date">
+            20 · 12 · 2026
+        </div>
+
+        <button class="open-button" onclick="openInvitation()">
+            اضغط لفتح الدعوة
+        </button>
+
+    </div>
+
+</section>
+
+
+<main id="main">
+
+<!-- ================================
+     HERO
+================================ -->
+
+<section class="hero">
+
+    <div class="hero-layout">
+
+        <div class="hero-text">
+
+            <div class="eyebrow">
+                OUR WEDDING DAY
+            </div>
+
+            <h1 class="hero-title">
+                أحمد
+                <div>سارة</div>
+            </h1>
+
+            <p class="hero-description">
+                بكل الحب والسعادة، ندعوكم لمشاركتنا
+                واحدة من أجمل لحظات حياتنا.
+                وجودكم معنا هو أجمل ما يمكن أن نهديه لهذه الليلة.
+            </p>
+
+            <div class="hero-date">
+                20 ديسمبر 2026
+            </div>
+
+        </div>
+
+
+        <div class="hero-photo">
+
+            <!-- صورة أحمد -->
+            <img
+                class="photo-main"
+                src="ahmed.jpg"
+                alt="أحمد">
+
+            <!-- صورة سارة -->
+            <img
+                class="photo-second"
+                src="sara.jpg"
+                alt="سارة">
+
+            <div class="photo-frame"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     QUOTE
+================================ -->
+
+<section class="quote">
+
+    <div class="quote-line"></div>
+
+    <p>
+        "وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم
+        مِّنْ أَنفُسِكُمْ أَزْوَاجًا
+        لِّتَسْكُنُوا إِلَيْهَا"
+    </p>
+
+    <small>
+        سورة الروم · 21
+    </small>
+
+</section>
+
+
+<!-- ================================
+     COUNTDOWN
+================================ -->
+
+<section class="countdown-section">
+
+    <div class="section-label">
+        THE COUNTDOWN
+    </div>
+
+    <div class="countdown">
+
+        <div class="time">
+            <strong id="days">00</strong>
+            <span>يوم</span>
+        </div>
+
+        <div class="time">
+            <strong id="hours">00</strong>
+            <span>ساعة</span>
+        </div>
+
+        <div class="time">
+            <strong id="minutes">00</strong>
+            <span>دقيقة</span>
+        </div>
+
+        <div class="time">
+            <strong id="seconds">00</strong>
+            <span>ثانية</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     EVENT DETAILS
+================================ -->
+
+<section class="event">
+
+    <div class="event-container">
+
+        <div class="section-label">
+            THE CELEBRATION
+        </div>
+
+        <h2 class="event-heading">
+            تفاصيل الليلة
+        </h2>
+
+        <div class="event-grid">
+
+            <div class="event-item">
+
+                <h3>DATE</h3>
+
+                <p>
+                    الأحد
+                    <br>
+                    20 ديسمبر 2026
+                </p>
+
+            </div>
+
+
+            <div class="event-item">
+
+                <h3>TIME</h3>
+
+                <p>
+                    08:00 مساءً
+                </p>
+
+                <small>
+                    ننتظركم قبل الموعد بقليل
+                </small>
+
+            </div>
+
+
+            <div class="event-item">
+
+                <h3>VENUE</h3>
+
+                <p>
+                    اسم القاعة
+                </p>
+
+                <small>
+                   اسم القاعة
+                </small>
+
+            </div>
+
+
+            <div class="event-item">
+
+                <h3>DRESS CODE</h3>
+
+                <p>
+                    Elegant
+                </p>
+
+                <small>
+                    ننتظركم بأجمل إطلالة
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     MAP
+================================ -->
+
+<section class="map-section">
+
+    <div class="map-wrapper">
+
+        <!-- غيّر المكان من الرابط الموجود هنا -->
+
+        <iframe
+            src="https://www.google.com/maps?q=Cairo,Egypt&output=embed"
+            loading="lazy">
+        </iframe>
+
+        <div class="map-overlay">
+
+            <h3>
+                موقع الحفل
+            </h3>
+
+            <p>
+                اضغط على الخريطة للوصول للمكان
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     RSVP
+================================ -->
+
+<section class="rsvp">
+
+    <div>
+
+        <div class="section-label">
+            RSVP
+        </div>
+
+        <h2>
+            مستنيينكم
+        </h2>
+
+        <p>
+            وجودكم هيكمل فرحتنا ❤️
+        </p>
+
+        <!-- غيّر الرقم هنا لرقم الواتساب -->
+
+        <a
+            class="rsvp-button"
+            href="https://wa.me/201091528534"
+            target="_blank">
+
+            تأكيد الحضور
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    أحمد <strong>&</strong> سارة
+    <br><br>
+    20 · 12 · 2026
+
+</footer>
+
+</main>
+
+
+<script>
+
+/* ================================
+   OPEN INVITATION
+================================ */
+
+function openInvitation(){
+
+    const opening = document.getElementById("opening");
+
+    opening.classList.add("hide");
+
+    setTimeout(() => {
+        document.body.style.overflow = "auto";
+    },1200);
+
+}
+
+
+/* ================================
+   COUNTDOWN
+================================ */
+
+/*
+   لو عاوز تغير الموعد:
+   غيّر التاريخ الموجود هنا فقط
+*/
+
+const weddingDate =
+    new Date("December 20, 2026 20:00:00").getTime();
+
+
+function updateCountdown(){
+
+    const now = new Date().getTime();
+
+    const distance = weddingDate - now;
+
+
+    if(distance <= 0){
+
+        document.getElementById("days").innerText = "00";
+        document.getElementById("hours").innerText = "00";
+        document.getElementById("minutes").innerText = "00";
+        document.getElementById("seconds").innerText = "00";
+
+        return;
+    }
+
+
+    const days =
+        Math.floor(distance / (1000 * 60 * 60 * 24));
+
+    const hours =
+        Math.floor(
+            (distance % (1000 * 60 * 60 * 24))
+            / (1000 * 60 * 60)
+        );
+
+    const minutes =
+        Math.floor(
+            (distance % (1000 * 60 * 60))
+            / (1000 * 60)
+        );
+
+    const seconds =
+        Math.floor(
+            (distance % (1000 * 60))
+            / 1000
+        );
+
+
+    document.getElementById("days").innerText =
+        String(days).padStart(2,"0");
+
+    document.getElementById("hours").innerText =
+        String(hours).padStart(2,"0");
+
+    document.getElementById("minutes").innerText =
+        String(minutes).padStart(2,"0");
+
+    document.getElementById("seconds").innerText =
+        String(seconds).padStart(2,"0");
+
+}
+
+
+updateCountdown();
+
+setInterval(updateCountdown,1000);
+
+</script>
+
+</body>
+</html>
